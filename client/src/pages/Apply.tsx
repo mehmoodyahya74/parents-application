@@ -100,7 +100,7 @@ export default function Apply() {
                       <div className="bg-blue-50 p-2 rounded-lg text-primary">
                         <User className="w-6 h-6" />
                       </div>
-                      <h2 className="text-2xl font-bold text-slate-800"> Contact / Identity Information</h2>
+                      <h2 className="text-2xl font-bold text-slate-800"> Identity Information</h2>
                     </div>
                     
                     <div className="grid md:grid-cols-2 gap-6">
@@ -196,7 +196,7 @@ export default function Apply() {
                       <div className="bg-green-50 p-2 rounded-lg text-green-600">
                         <BookOpen className="w-6 h-6" />
                       </div>
-                      <h2 className="text-2xl font-bold text-slate-800"> Class / Subject Information</h2>
+                      <h2 className="text-2xl font-bold text-slate-800"> Subject Information</h2>
                     </div>
 
                     <FormField
@@ -430,7 +430,7 @@ export default function Apply() {
                       <div className="bg-yellow-50 p-2 rounded-lg text-yellow-600">
                         <CreditCard className="w-6 h-6" />
                       </div>
-                      <h2 className="text-2xl font-bold text-slate-800"> Payment / Package Information</h2>
+                      <h2 className="text-2xl font-bold text-slate-800"> Payment </h2>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
