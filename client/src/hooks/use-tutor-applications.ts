@@ -1,13 +1,13 @@
 import { useMutation } from "@tanstack/react-query";
 import { api } from "@shared/routes";
 import { useToast } from "@/hooks/use-toast";
-import type { InsertTutorApplication } from "@shared/schema";
+import type { InsertParentApplication } from "@shared/schema";
 
 export function useCreateTutorApplication() {
   const { toast } = useToast();
 
   return useMutation({
-    mutationFn: async (data: InsertTutorApplication) => {
+    mutationFn: async (data: InsertParentApplication) => {
       const res = await fetch(api.applications.create.path, {
         method: api.applications.create.method,
         headers: { "Content-Type": "application/json" },
