@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { insertTutorApplicationSchema, tutorApplications } from './schema.js';
+import { insertParentApplicationSchema, parentApplications } from './schema.js';
 
 export const errorSchemas = {
   validation: z.object({
@@ -16,9 +16,9 @@ export const api = {
     create: {
       method: 'POST' as const,
       path: '/api/applications' as const,
-      input: insertTutorApplicationSchema,
+      input: insertParentApplicationSchema,
       responses: {
-        201: z.custom<typeof tutorApplications.$inferSelect>(),
+        201: z.custom<typeof parentApplications.$inferSelect>(),
         400: errorSchemas.validation,
       },
     },
@@ -27,7 +27,7 @@ export const api = {
       method: 'GET' as const,
       path: '/api/applications' as const,
       responses: {
-        200: z.array(z.custom<typeof tutorApplications.$inferSelect>()),
+        200: z.array(z.custom<typeof parentApplications.$inferSelect>()),
       },
     },
   },
