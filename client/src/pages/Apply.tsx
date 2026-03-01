@@ -54,8 +54,7 @@ export default function Apply() {
       travelDistance: "",
       paymentPreference: "",
       packageInfo: "",
-      agreementConsent: false,
-      receiveUpdates: false,
+      confirmationAccuracy: false,
       referralSource: "",
       studentAdditionalNotes: "",
     },
@@ -472,56 +471,37 @@ export default function Apply() {
                     </div>
                   </section>
 
-                  {/* Section 5: Trust & Consent */}
+                  {/* Section 5: Confirmation */}
                   <section className="space-y-6">
                     <div className="flex items-center gap-3 pb-4 border-b">
                       <div className="bg-red-50 p-2 rounded-lg text-red-600">
                         <Shield className="w-6 h-6" />
                       </div>
-                      <h2 className="text-2xl font-bold text-slate-800"> Trust & Consent</h2>
+                      <h2 className="text-2xl font-bold text-slate-800">Confirmation</h2>
                     </div>
 
-                    <div className="space-y-4">
-                      <FormField
-                        control={form.control}
-                        name="agreementConsent"
-                        render={({ field }) => (
-                          <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-xl border p-4">
-                            <FormControl>
-                              <Checkbox
-                                checked={field.value}
-                                onCheckedChange={field.onChange}
-                              />
-                            </FormControl>
-                            <div className="space-y-1 leading-none">
-                              <FormLabel className="font-semibold cursor-pointer">
-                                I understand the trial/demo class policy, safe payment process, and privacy. <span className="text-red-500">*</span>
-                              </FormLabel>
-                            </div>
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="receiveUpdates"
-                        render={({ field }) => (
-                          <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-xl border p-4">
-                            <FormControl>
-                              <Checkbox
-                                checked={field.value}
-                                onCheckedChange={field.onChange}
-                              />
-                            </FormControl>
-                            <div className="space-y-1 leading-none">
-                              <FormLabel className="cursor-pointer">
-                                Receive reminders and announcements via email/phone.
-                              </FormLabel>
-                            </div>
-                          </FormItem>
-                        )}
-                      />
-                    </div>
+                    <FormField
+                      control={form.control}
+                      name="confirmationAccuracy"
+                      render={({ field }) => (
+                        <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-xl border p-4">
+                          <FormControl>
+                            <Checkbox
+                              checked={field.value}
+                              onCheckedChange={field.onChange}
+                            />
+                          </FormControl>
+                          <div className="space-y-1 leading-none">
+                            <FormLabel className="font-semibold cursor-pointer">
+                              I confirm that all provided information is accurate <span className="text-red-500">*</span>
+                            </FormLabel>
+                            <p className="text-sm text-gray-500">
+                              By checking this box, you confirm that the information provided is true and correct to the best of your knowledge.
+                            </p>
+                          </div>
+                        </FormItem>
+                      )}
+                    />
                   </section>
 
                   {/* Section 6: Optional / Additional Info */}
