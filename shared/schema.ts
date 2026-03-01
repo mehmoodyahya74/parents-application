@@ -24,8 +24,7 @@ export const parentApplications = pgTable("parent_applications", {
   paymentPreference: text("payment_preference"),
   packageInfo: text("package_info"),
   
-  agreementConsent: boolean("agreement_consent").notNull(),
-  receiveUpdates: boolean("receive_updates").default(false),
+  confirmationAccuracy: boolean("confirmation_accuracy").notNull(),
   
   referralSource: text("referral_source"),
   studentAdditionalNotes: text("student_additional_notes"),
@@ -46,8 +45,8 @@ export const insertParentApplicationSchema = createInsertSchema(parentApplicatio
     teachingMode: z.enum(['Online', 'Offline', 'Both']),
     preferredTimeSlots: z.array(z.string()).min(1, "Select at least one time slot"),
     daysAvailable: z.array(z.string()).min(1, "Select at least one day"),
-    agreementConsent: z.boolean().refine(val => val === true, {
-      message: "You must agree to the terms"
+    confirmationAccuracy: z.boolean().refine(val => val === true, {
+      message: "You must confirm the information is accurate"
     }),
   });
 
