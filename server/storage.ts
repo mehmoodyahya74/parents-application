@@ -1,18 +1,18 @@
 import { db } from "./db.js";
 import { eq, desc } from "drizzle-orm";
-import { tutorApplications, type InsertTutorApplication, type TutorApplication } from "../shared/schema.js";
+import { parentApplications, type InsertParentApplication, type ParentApplication } from "../shared/schema.js";
 
 export interface IStorage {
-  createApplication(app: InsertTutorApplication): Promise<TutorApplication>;
-  getApplications(): Promise<TutorApplication[]>;
-  getApplication(id: number): Promise<TutorApplication | undefined>;
+  createApplication(app: InsertParentApplication): Promise<ParentApplication>;
+  getApplications(): Promise<ParentApplication[]>;
+  getApplication(id: number): Promise<ParentApplication | undefined>;
 }
 
 export class DatabaseStorage implements IStorage {
-  async createApplication(app: InsertTutorApplication): Promise<TutorApplication> {
+  async createApplication(app: InsertParentApplication): Promise<ParentApplication> {
     try {
       const [newApp] = await db
-        .insert(tutorApplications)
+        .insert(parentApplications)
         .values(app)
         .returning();
       return newApp;
@@ -22,24 +22,24 @@ export class DatabaseStorage implements IStorage {
     }
   }
 
-  async getApplications(): Promise<TutorApplication[]> {
+  async getApplications(): Promise<ParentApplication[]> {
     try {
       return await db
         .select()
-        .from(tutorApplications)
-        .orderBy(desc(tutorApplications.createdAt));
+        .from(parentApplications)
+        .orderBy(desc(parentApplications.createdAt));
     } catch (error) {
       console.error("Error fetching applications:", error);
       throw new Error("Failed to fetch applications from database");
     }
   }
 
-  async getApplication(id: number): Promise<TutorApplication | undefined> {
+  async getApplication(id: number): Promise<ParentApplication | undefined> {
     try {
       const [application] = await db
         .select()
-        .from(tutorApplications)
-        .where(eq(tutorApplications.id, id));
+        .from(parentApplications)
+        .where(eq(parentApplications.id, id));
       return application;
     } catch (error) {
       console.error(`Error fetching application ${id}:`, error);
