@@ -100,7 +100,7 @@ export default function Apply() {
                       <div className="bg-blue-50 p-2 rounded-lg text-primary">
                         <User className="w-6 h-6" />
                       </div>
-                      <h2 className="text-2xl font-bold text-slate-800">1️⃣ Contact / Identity Information</h2>
+                      <h2 className="text-2xl font-bold text-slate-800"> Contact / Identity Information</h2>
                     </div>
                     
                     <div className="grid md:grid-cols-2 gap-6">
@@ -196,7 +196,7 @@ export default function Apply() {
                       <div className="bg-green-50 p-2 rounded-lg text-green-600">
                         <BookOpen className="w-6 h-6" />
                       </div>
-                      <h2 className="text-2xl font-bold text-slate-800">2️⃣ Class / Subject Information</h2>
+                      <h2 className="text-2xl font-bold text-slate-800"> Class / Subject Information</h2>
                     </div>
 
                     <FormField
@@ -389,7 +389,7 @@ export default function Apply() {
                         <div className="bg-purple-50 p-2 rounded-lg text-purple-600">
                           <MapPin className="w-6 h-6" />
                         </div>
-                        <h2 className="text-2xl font-bold text-slate-800">3️⃣ Location / Offline Info</h2>
+                        <h2 className="text-2xl font-bold text-slate-800"> Location / Offline Info</h2>
                       </div>
 
                       <div className="grid md:grid-cols-2 gap-6">
@@ -430,7 +430,7 @@ export default function Apply() {
                       <div className="bg-yellow-50 p-2 rounded-lg text-yellow-600">
                         <CreditCard className="w-6 h-6" />
                       </div>
-                      <h2 className="text-2xl font-bold text-slate-800">4️⃣ Payment / Package Information</h2>
+                      <h2 className="text-2xl font-bold text-slate-800"> Payment / Package Information</h2>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
@@ -478,7 +478,7 @@ export default function Apply() {
                       <div className="bg-red-50 p-2 rounded-lg text-red-600">
                         <Shield className="w-6 h-6" />
                       </div>
-                      <h2 className="text-2xl font-bold text-slate-800">5️⃣ Trust & Consent</h2>
+                      <h2 className="text-2xl font-bold text-slate-800"> Trust & Consent</h2>
                     </div>
 
                     <div className="space-y-4">
@@ -530,7 +530,7 @@ export default function Apply() {
                       <div className="bg-gray-50 p-2 rounded-lg text-gray-600">
                         <Info className="w-6 h-6" />
                       </div>
-                      <h2 className="text-2xl font-bold text-slate-800">6️⃣ Optional / Additional Info</h2>
+                      <h2 className="text-2xl font-bold text-slate-800"> Optional / Additional Info</h2>
                     </div>
 
                     <FormField
