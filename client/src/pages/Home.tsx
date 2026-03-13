@@ -37,11 +37,13 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              {/* Find a Tutor - Now the main/primary button */}
               <Link href="/find-tutor">
                 <button className="w-full sm:w-auto px-8 py-4 rounded-xl bg-primary text-white font-bold text-lg shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
                   Find a Tutor <Search className="w-5 h-5" />
                 </button>
               </Link>
+              {/* Register as Student - Now the secondary button */}
               <Link href="/apply">
                 <button className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-slate-700 font-bold text-lg border border-slate-200 shadow-sm hover:border-slate-300 hover:bg-slate-50 transition-all duration-300">
                   Register as Student
@@ -168,9 +170,9 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Link href="/apply">
+            <Link href="/find-tutor">
               <button className="px-8 py-4 rounded-xl bg-primary text-white font-bold text-lg hover:bg-primary/90 transition-all duration-200 shadow-lg shadow-primary/25">
-                Get Started Now
+                Find Your Tutor
               </button>
             </Link>
           </div>
@@ -222,14 +224,14 @@ export default function Home() {
                 Join hundreds of families who have found their perfect tutor match with us.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/apply">
+                <Link href="/find-tutor">
                   <button className="px-8 py-4 rounded-xl bg-primary text-white font-bold text-lg hover:bg-primary/90 hover:scale-105 transition-all duration-200 shadow-lg shadow-primary/25">
-                    Register as Student
+                    Find a Tutor
                   </button>
                 </Link>
-                <Link href="/find-tutor">
+                <Link href="/apply">
                   <button className="px-8 py-4 rounded-xl bg-white/10 text-white font-bold text-lg border border-white/20 hover:bg-white/20 hover:scale-105 transition-all duration-200">
-                    Browse Tutors
+                    Register as Student
                   </button>
                 </Link>
               </div>
