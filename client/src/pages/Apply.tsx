@@ -10,7 +10,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Button } from "@/components/ui/button";
 import { Loader2, User, MapPin, BookOpen, Phone, Shield, Info, CreditCard } from "lucide-react";
 import { motion } from "framer-motion";
@@ -432,7 +431,7 @@ export default function Apply() {
                       <h2 className="text-2xl font-bold text-slate-800"> Payment </h2>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-1 max-w-md">
                       <FormField
                         control={form.control}
                         name="paymentPreference"
@@ -450,20 +449,6 @@ export default function Apply() {
                                 <SelectItem value="Per Class">Per Class</SelectItem>
                               </SelectContent>
                             </Select>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="packageInfo"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel className="text-slate-700 font-semibold">Number of Classes</FormLabel>
-                            <FormControl>
-                              <Input type="number" placeholder="Interested number of classes" className="h-12 rounded-xl" {...field} />
-                            </FormControl>
                             <FormMessage />
                           </FormItem>
                         )}
