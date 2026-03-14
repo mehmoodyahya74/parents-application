@@ -11,7 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
-import { Loader2, User, MapPin, BookOpen, Phone, Shield, Info, CreditCard } from "lucide-react";
+import { Loader2, User, MapPin, BookOpen, Phone, Shield, CreditCard } from "lucide-react";
 import { motion } from "framer-motion";
 
 const SUBJECTS_LIST = [
@@ -484,48 +484,6 @@ export default function Apply() {
                               By checking this box, you confirm that the information provided is true and correct to the best of your knowledge.
                             </p>
                           </div>
-                        </FormItem>
-                      )}
-                    />
-                  </section>
-
-                  {/* Section 6: Optional / Additional Info */}
-                  <section className="space-y-6">
-                    <div className="flex items-center gap-3 pb-4 border-b">
-                      <div className="bg-gray-50 p-2 rounded-lg text-gray-600">
-                        <Info className="w-6 h-6" />
-                      </div>
-                      <h2 className="text-2xl font-bold text-slate-800"> Optional / Additional Info</h2>
-                    </div>
-
-                    <FormField
-                      control={form.control}
-                      name="referralSource"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-slate-700 font-semibold">How did you hear about us?</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Referral, Social Media, etc." className="h-12 rounded-xl" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="studentAdditionalNotes"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-slate-700 font-semibold">Additional notes for the tutor</FormLabel>
-                          <FormControl>
-                            <Textarea 
-                              placeholder="Any personal learning style info or other qualifications" 
-                              className="min-h-[100px] rounded-xl" 
-                              {...field} 
-                            />
-                          </FormControl>
-                          <FormMessage />
                         </FormItem>
                       )}
                     />
